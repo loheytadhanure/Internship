@@ -41,16 +41,16 @@ const BestSeller = () => {
   const { products } = useContext(ShopContext);
   const [bestSeller, setBestSeller] = useState([]);
 
-//   useEffect(() => {
-//     const bestProduct = products.filter((item) => item.bestSeller);
-//     setBestSeller(bestProduct.slice(0, 5));
-//   }, [products]); 
+  //   useEffect(() => {
+  //     const bestProduct = products.filter((item) => item.bestSeller);
+  //     setBestSeller(bestProduct.slice(0, 5));
+  //   }, [products]); 
 
 
-useEffect(() => {
-  const simulatedBest = products.slice(0, 5).map((item) => ({ ...item, bestSeller: true }));
-  setBestSeller(simulatedBest);
-}, [products]);
+  useEffect(() => {
+    const simulatedBest = products.slice(0, 5).map((item) => ({ ...item, bestSeller: true }));
+    setBestSeller(simulatedBest);
+  }, [products]);
 
 
 
@@ -59,7 +59,7 @@ useEffect(() => {
       <div className='text-center text-3xl py-8'>
         <Title text1={'BEST'} text2={'SELLER'} />
         <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-700'>
-          HELLLLLOOOOOO HOWWWW AREEEEE YOUUUUU
+          We will make sure you get the best products!!
         </p>
       </div>
 
@@ -71,7 +71,7 @@ useEffect(() => {
             name={item.name}
             image={item.image}
             price={item.price}
-            bestSeller = {item.bestseller}
+            bestSeller={item.bestseller}
           />
         ))}
       </div>
